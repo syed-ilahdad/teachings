@@ -98,44 +98,13 @@ useEffect(() => {
         backgroundSize:     'cover',
         backgroundPosition: 'center',
         backgroundRepeat:   'no-repeat',
-        opacity:     0.1,
+        opacity:     0.7,
         // Force black/white tint over image per theme
         // The body bg color (semi-transparent) shows through
       }} />
 
       {/* Cursor reveal circle — 70% opacity via clip-path */}
-      <div
-        ref={circleRef}
-        style={{
-          position:    'fixed',
-          top:          0,
-          left:         0,
-          width:        90,
-          height:       90,
-          borderRadius: '50%',
-          zIndex:        1,
-          pointerEvents: 'none',
-          
-          // Show image at 70% inside circle
-          backgroundImage:    `url(${bgUrl})`,
-          backgroundSize:     '100vw 100vh',
-          backgroundAttachment: 'fixed',
-          backgroundPosition:   'center',
-          opacity:      1,
-          // Soft edge
-          // boxShadow:   'inset 0 0 20px 10px var(--bg)',
-//           maskImage: 'radial-gradient(circle, rgba(0,0,0,1) 35%, rgba(0,0,0,0.9) 55%, rgba(0,0,0,0.4) 75%, rgba(0,0,0,0.1) 100%)',
-// WebkitMaskImage: 'radial-gradient(circle, rgba(0,0,0,1) 35%, rgba(0,0,0,0.9) 55%, rgba(0,0,0,0.4) 75%, rgba(0,0,0,0.1) 100%)',
 
-maskImage:
-  'radial-gradient(circle, rgba(0,0,0,1) 5%, rgba(0,0,0,0.7) 28%, rgba(0,0,0,0.35) 55%, rgba(0,0,0,0.12) 78%, rgba(0,0,0,0.02) 100%)',
-
-WebkitMaskImage:
-  'radial-gradient(circle, rgba(0,0,0,1) 8%, rgba(0,0,0,0.7) 28%, rgba(0,0,0,0.35) 55%, rgba(0,0,0,0.12) 78%, rgba(0,0,0,0.02) 100%)',          
-willChange:  'transform',
-
-        }}
-      />
     </>
   );
 }
